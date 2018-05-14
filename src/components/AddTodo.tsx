@@ -6,6 +6,9 @@ import { addTodo } from "../actions/index";
 
 export default connect()((store: { dispatch: Function }): any => {
   let input: any;
+  for (var i = 0; i < 1730; i++) {
+    store.dispatch(addTodo(i.toString()));
+  }
 
   return (
     <div>
